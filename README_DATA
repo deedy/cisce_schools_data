@@ -51,7 +51,7 @@ CisceSchool {
     'Girls', # count: 116
   }
 
-  # Residential Type
+  # Residential Type (e.g. D/R, Day)
   optional ResidentialType res_type;
   enum ResidentialType {
     'D/R', # count: 202
@@ -66,15 +66,15 @@ CisceSchool {
   }
 
   # Does this school administer ICSE (Class X examinations)
-  # yes: 2339, no: 2
+  # True: 2339, False: 2
   required bool is_icse;
 
   # Does this school administer ISC (Class XII examinations)
-  # yes: 1228, no: 1113
+  # True: 1228, False: 1113
   required bool is_isc;
 
   # Does this school administer CVE (Certificate of Vocational Education)
-  # yes: 9, no: 2332
+  # True: 9, False: 2332
   required bool is_cve;
 
   # Name of the Principal
