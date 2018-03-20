@@ -19,7 +19,7 @@ The scraping, parsing and cleaning code is not in this repository.
  - `analyze_pickle.py` reads the `pickle` file in Python and prepares it for analysis.
  - `schools.p` the pickle file - 722KB
  
-## Short Documentation (Basic)
+## Short Documentation
 
 There are 16 total fields per school, a total of 38k data points. For full documentation, see `README_DATA`. 
 
