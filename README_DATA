@@ -1,0 +1,131 @@
+# This is the documentation for the ISC 2018 Schools data. 
+# The data has 16 fields documented below for 2,341 schools.
+
+# Go to the URL http://www.cisce.org/locate-search.aspx?country=0&state=0&dist=0&city=0&location=&schooltype=&cve=&isc=&icse=&schoolclassi=&school=&search=locate
+# to find the raw data for the CISCE schools
+CisceSchool {
+  
+  # Name of the school
+  required string name;
+
+  # 5-digit unique code for school (e.g. AP001)
+  # First two letters are state code, and last three letters are identifier.
+  required string code;
+
+  # Postal Address
+  required string address;
+
+  # State of the school
+  # Schools in Telangana that were affiliated during the time it was Andhra Pradesh
+  # are still associated with Andhra Pradesh. 
+  # Foreign School States are DUBAI, INDONESIA, SHARJAH, SINGAPORE, THAILAND
+  required State state;
+
+  # Office Phone number
+  # Integral phone number that may be prefixed with '+'
+  # (missing 33/2341 - 1%)
+  optional Phone off_ph_no;
+
+  # Office Phone number 2
+  # Integral phone number that may be prefixed with '+'
+  # (missing 926/2341 - 40%)
+  optional Phone off_ph_no_2;
+
+  # Fax number
+  # Integral phone number that may be prefixed with '+'
+  # (missing 915/2341 - 39%)
+  optional Phone fax_no;
+
+  # Email address 
+  # (missing 5/2341)
+  optional string email;
+
+  # Website of the school
+  required string website;
+
+  # Gender of the school students (e.g. Co-ed, Boys, Girls)
+  required Gender gender;
+  enum Gender {
+    'Co-ed.', # count: 2157
+    'Boys', # count: 68
+    'Girls', # count: 116
+  }
+
+  # Residential Type
+  optional ResidentialType res_type;
+  enum ResidentialType {
+    'D/R', # count: 202
+    'Day', # count: 1959
+  }
+
+  # Affiliation type of the school (e.g Permanent, Provisional)
+  required AffiliationType aff_type;
+  enum AffiliationType {
+    'Permanent', # count: 1290
+    'Provisional', # count: 1051
+  }
+
+  # Does this school administer ICSE (Class X examinations)
+  # yes: 2339, no: 2
+  required bool is_icse;
+
+  # Does this school administer ISC (Class XII examinations)
+  # yes: 1228, no: 1113
+  required bool is_isc;
+
+  # Does this school administer CVE (Certificate of Vocational Education)
+  # yes: 9, no: 2332
+  required bool is_cve;
+
+  # Name of the Principal
+  # Stripped of prefixes.
+  required string princi_name;
+
+  enum State {
+    # Foreign Locations
+    ('DU', 'DUBAI'), # count: 3
+    ('IN', 'INDONESIA'), # count: 1
+    ('SA', 'SHARJAH'), # count: 1
+    ('SG', 'SINGAPORE'), # count: 1
+    ('TH', 'THAILAND'), # count: 1
+    # Indian States
+    ('AP', 'ANDHRA PRADESH'), # count: 91
+    ('AR', 'ARUNACHAL PRADESH'), # count: 12
+    ('AS', 'ASSAM'), # count: 6
+    ('BI', 'BIHAR'), # count: 35
+    ('CG', 'CHATTISGARH'), # count: 17
+    ('GO', 'GOA'), # count: 4
+    ('GU', 'GUJARAT'), # count: 37
+    ('HA', 'HARYANA'), # count: 24
+    ('HP', 'HIMACHAL PRADESH'), # count: 25
+    ('JK', 'JAMMU & KASHMIR'), # count: 1
+    ('JH', 'JHARKHAND'), # count: 108
+    ('KA', 'KARNATAKA'), # count: 346
+    ('KE', 'KERALA'), # count: 162
+    ('MP', 'MADHYA PRADESH'), # count: 37
+    ('MA', 'MAHARASHTRA'), # count: 220
+    ('MN', 'MANIPUR'), # count: 1
+    ('ME', 'MEGHALAYA'), # count: 7
+    ('MZ', 'MIZORAM'), # NONE count: 0
+    ('NA', 'NAGALAND'), # count: 1
+    ('OR', 'ODISHA'), # count: 93
+    ('PU', 'PUNJAB'), # count: 136
+    ('RA', 'RAJASTHAN'), # count: 14
+    ('SI', 'SIKKIM'), # count: 8
+    ('TN', 'TAMILNADU'), # count: 93
+    ('TS', 'TELANGANA'), # count: 2
+    ('TR', 'TRIPURA'), # count: 3
+    ('UP', 'UTTAR PRADESH'), # count: 363
+    ('UT', 'UTTARAKHAND'), # count: 101
+    ('WB', 'WEST BENGAL'), # count: 378
+    # Indian Union Territories
+    ('AN', 'ANDAMAN & NICOBAR'), # NONE count: 0
+    ('CH', 'CHANDIGARH'), # count: 4
+    ('DN', 'DADAR & NAGAR HAVELI') # NONE count: 0
+    ('DD', 'DAMAN & DIU'), # NONE count: 0
+    ('DE', 'DELHI'), # count: 3
+    ('LD', 'LAKSHADWEEP'), # NONE count: 0
+    ('PN', 'PUDUCHERRY'), # count: 2
+  }
+}
+
