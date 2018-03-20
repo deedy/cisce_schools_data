@@ -3,7 +3,8 @@
 [CISCE](https://en.wikipedia.org/wiki/Council_for_the_Indian_School_Certificate_Examinations) is one of the two national level boards of education in India (alongwith [CBSE](https://en.wikipedia.org/wiki/Central_Board_of_Secondary_Education)).
 While CBSE is a government board, CISCE is a private board.
 Every year, over **300,000** students take the ICSE (Class X) and the ISC (Class XII) board examination in India (and several schools abroad).
-The sister repository to this, contains the [cbse_schools_data](https://github.com/deedy/cbse_schools_data).
+
+> **The sister repository to this, contains the [cbse_schools_data](https://github.com/deedy/cbse_schools_data).**
 
 As of **2018**, there are **2,341** schools affiliated with the CISCE (out of which only 7 are outside India).
 The details of each of these schools can be fetched from the [CISCE School Directory](http://www.cisce.org/locate-search.aspx?country=0&state=0&dist=0&city=0&location=&schooltype=&cve=&isc=&icse=&schoolclassi=&school=&search=locate).
